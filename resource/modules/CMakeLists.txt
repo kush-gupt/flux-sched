@@ -10,6 +10,10 @@ target_link_libraries (sched-fluxion-resource-module PUBLIC
     PkgConfig::UUID
     cppwrappers
     )
+set_target_properties(sched-fluxion-resource-module PROPERTIES
+    VERSION ${PROJECT_VERSION}
+    SOVERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    )
 install(TARGETS sched-fluxion-resource-module LIBRARY)
 
 flux_add_plugin ( sched-fluxion-resource MODULE
